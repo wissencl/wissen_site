@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModalProyect } from './ModalProyect';
 
 export const ProyectCard = ({ titulo, descripcion, tecnologias }) => {
   return (
@@ -13,7 +12,7 @@ export const ProyectCard = ({ titulo, descripcion, tecnologias }) => {
           <div className="flex items-center">
               {
                 tecnologias.map( (value, i) => (
-                  <img key = { i } className="w-10 h-10 rounded-full mr-4 object-contain" src={ `/assets/images/${ value }`} />
+                  <img key = { i.toString() } className="w-10 h-10 rounded-full mr-4 object-contain" src={ `/assets/images/${ value }`} />
                 ))
               }
               <div className="text-sm">
@@ -23,7 +22,6 @@ export const ProyectCard = ({ titulo, descripcion, tecnologias }) => {
           </div>
           </div>
       </div>
-      <ModalProyect />
     </>
   );
 };
